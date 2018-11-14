@@ -1,12 +1,16 @@
 import React, {Component} from "react";
+import Header from "./components/Header";
 import "./sass/general.sass";
 
 class App extends Component {
   render() {
     return (
-      <section>
-        <h1>Test</h1>
-      </section>
+      <div>
+        <Header />
+        <div>Header</div>
+        <div>Main</div>
+        <div>Nav</div>
+      </div>
     );
   }
 }

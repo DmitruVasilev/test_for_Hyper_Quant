@@ -1,0 +1,46 @@
+@import '../../sass/vars'
+
+.hamburger
+  width: 35px
+  height: 24px
+  position: relative
+  transform: rotate(0deg)
+  transition: 0.5s ease-in-out
+  cursor: pointer
+  & span
+    display: block
+    position: absolute
+    height: 2px
+    width: 100%
+    background: $text
+    border-radius: 0
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: 0.25s ease-in-out
+
+  & span:nth-child(1)
+    top: 0
+
+  & span:nth-child(2),#nav-icon3 span:nth-child(3)
+    top: 11px
+
+  & span:nth-child(4)
+    top: 22px
+
+  &.open span:nth-child(1)
+    top: 11px
+    width: 0
+    left: 50%
+
+  &.open span:nth-child(2)
+    transform: rotate(45deg)
+
+  &.open span:nth-child(3)
+    top: 11px
+    transform: rotate(-45deg)
+
+  &.open span:nth-child(4)
+    top: 11px
+    width: 0
+    left: 50%
