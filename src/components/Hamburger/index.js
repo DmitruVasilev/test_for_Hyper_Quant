@@ -13,6 +13,7 @@ const Hamburger = ({toggleOpen, isOpen}) => (
 );
 
 Hamburger.propTypes = {
+  // from decorator
   isOpen: PropTypes.bool.isRequired,
   toggleOpen: PropTypes.func.isRequired,
 };

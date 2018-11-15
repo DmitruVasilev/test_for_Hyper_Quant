@@ -5,9 +5,8 @@ import "./sass/general.sass";
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <Header />
-        <div>Header</div>
         <div>Main</div>
         <div>Nav</div>
       </div>
