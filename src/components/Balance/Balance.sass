@@ -1,0 +1,48 @@
+@import '../../sass/vars'
+
+.balance
+  display: flex
+  padding: 0 32px 50px
+  & .balance__list
+    padding-left: 40px
+    margin: 45px 0 0
+    & .balance__item
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 6px
+      list-style: none
+      & .balance__caption
+        margin-right: 25px
+        font-size: 24px
+        font-weight: bold
+        font-family: $base-ff
+        color: $text
+        text-transform: uppercase
+      & .balance__value
+        font-size: 24px
+        font-weight: bold
+        font-family: $base-ff
+        color: white
+        text-transform: uppercase
+      & .balance__icon
+        display: block
+        width: 30px
+        height: 30px
+        margin-left: 10px
+        background-image: url("../../img/h.png")
+
+.capital
+  display: flex
+  flex-direction: column
+  .capital__caption
+    margin-bottom: 20px
+    font-size: 24px
+    font-family: $base-ff
+    color: $text
+    text-transform: uppercase
+  .capital__value
+    font-size: 64px
+    font-family: $base-ff
+    color: white
+    text-transform: uppercase
