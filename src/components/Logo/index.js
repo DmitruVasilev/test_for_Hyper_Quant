@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Logo.sass";
 
-const Hamburger = ({children}) => (
+const Logo = ({children}) => (
   <div className="logo">
     <a href="/" className="logo__link">
       {children}
@@ -10,8 +10,8 @@ const Hamburger = ({children}) => (
   </div>
 );
 
-Hamburger.propTypes = {
+Logo.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 };
 
-export default Hamburger;
+export default Logo;

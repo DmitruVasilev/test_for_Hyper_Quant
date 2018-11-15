@@ -4,7 +4,7 @@ import Logo from "../Logo";
 import Refresh from "../Refresh";
 import "./Header.sass";
 
-class App extends Component {
+class Header extends Component {
   render() {
     return (
       <header className="header">
@@ -16,4 +16,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Header;

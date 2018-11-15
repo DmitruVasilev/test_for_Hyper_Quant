@@ -1,6 +1,6 @@
 import React from "react";
-import "./Balance.sass";
 import PropTypes from "prop-types";
+import "./Balance.sass";
 
 const Balance = ({balance, on_hold, trading_capital, trading_capital_currency}) => (
   <section className="balance">
