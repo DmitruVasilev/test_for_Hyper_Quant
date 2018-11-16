@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Balance from "./components/Balance";
 import Schedule from "./components/Schedule";
 import BotList from "./components/BotList";
+import TimeRange from "./components/TimeRange";
 import data from "./data.min";
 import "./sass/general.sass";
 
@@ -10,7 +11,11 @@ import "./sass/general.sass";
 
 class App extends Component {
   state = {
-    filter_value: "24h",
+    filter_value: "all_time",
+  };
+
+  onChangeTime = (time) => {
+    this.setState({filter_value: time});
   };
 
   render() {
@@ -26,6 +31,7 @@ class App extends Component {
           />
           <Schedule />
           <BotList bots={data.bots} filter_value={this.state.filter_value} />
+          <TimeRange onChangeTime={this.onChangeTime} stateTime={this.state.filter_value} />
         </main>
         <div>Nav</div>
       </div>
