@@ -3,9 +3,12 @@
 .bot_list
   display: flex
   flex-wrap: wrap
+  position: relative
   padding: 0 30px 32px
   margin: 0
   overflow: hidden
+  & .bot_list__item
+    list-style: none
 
 .bot
   display: flex
@@ -16,8 +19,14 @@
   width: 228px
   height: 210px
   margin: 1px
+  border-radius: 8px
   background: $primary
-  list-style: none
+  background-size: cover
+  transition: $base-transition
+  text-decoration: none
+  cursor: pointer
+  &:hover
+    background: url("../../img/line_conection.png") no-repeat
 
   & .bot__icon
     width: 90px
@@ -34,16 +43,19 @@
     &.bot__icon--yellow_bot
       background: url("../../img/bot_mega.png")
       height: 90px
-    &.bot__icon--white_bot
+    &.bot__icon--dark_bot
       background: url("../../img/bot_dark.png")
 
   & .bot__name
-    margin-bottom: 10px
     font-size: 20px
     text-transform: uppercase
     font-weight: bold
+    line-height: 1.5
     color: white
     font-family: $base-ff
+    text-align: center
+    &.bot__name--dark
+      color: $text
 
   & .bot__value
     font-size: 20px
@@ -53,4 +65,28 @@
       color: $accent
     &.bot__value--more
       color: $success
+
+.bot__line
+  display: block
+  position: absolute
+  left: 0
+  top: 0
+  width: 99px
+  height: 22px
+  background: url("../../img/line_conection.png") no-repeat
+  &.bot__line--top-left
+    top: 200px
+    left: 200px
+    transform: rotate(45deg)
+  &.bot__line--top-right
+    top: 200px
+    left: 440px
+    transform: rotate(-45deg)
+  &.bot__line--bottom-left
+    top: 300px
+    left: 200px
+  &.bot__line--bottom-right
+    top: 300px
+    left: 440px
+    transform: rotate(180deg)
 

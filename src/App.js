@@ -6,7 +6,7 @@ import BotList from "./components/BotList";
 import data from "./data.min";
 import "./sass/general.sass";
 
-console.log("---", data);
+// console.log("---", data);
 
 class App extends Component {
   state = {

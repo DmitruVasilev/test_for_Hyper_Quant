@@ -12,47 +12,33 @@ class BotList extends Component {
     }).isRequired,
   };
 
-  getBotName = (bot_name) => {
-    if (bot_name === "yellow_bot") {
-      return "megabot";
-    }
-
-    if (bot_name === "green_bot") {
-      return "defence";
-    }
-
-    if (bot_name === "red_bot") {
-      return "attack";
-    }
-
-    if (bot_name === "orange_bot") {
-      return "attack";
-    }
-
-    if (bot_name === "blue_bot") {
-      return "balance";
-    }
-
-    if (bot_name === "white_bot") {
-      return "balance";
-    }
-
-    return null;
-  };
-
   render() {
     const {bots, filter_value} = this.props;
     return (
       <section>
         <ul className="bot_list">
           {bots.map((bot) => (
-            <li key={bot.cost} className="bot">
-              <span className={`bot__icon bot__icon--${bot.name}`} />
-              <span className="bot__name">{this.getBotName(bot.name)}</span>
-              <span className={`bot__value bot__value--${bot[filter_value] < 0 ? "less" : "more"}`}>
-                {bot[filter_value] < 0 ? "" : "+"}
-                {bot[filter_value]}%
-              </span>
+            <li key={bot.cost} className="bot_list__item">
+              <a href="/" className="bot">
+                <span className={`bot__icon bot__icon--${bot.name}`} />
+                <span className={`bot__name ${bot.name === "dark_bot" && "bot__name--dark"}`}>{bot.action}</span>
+                <span
+                  className={`bot__value
+                    ${bot.name === "dark_bot" && "hidden"}
+                    bot__value--${bot[filter_value] < 0 ? "less" : "more"}`}
+                >
+                  {bot[filter_value] < 0 ? "" : "+"}
+                  {bot[filter_value]}%
+                </span>
+              </a>
+              {bot.name === "yellow_bot" && (
+                <span>
+                  <span className="bot__line bot__line--top-left" />
+                  <span className="bot__line bot__line--top-right" />
+                  <span className="bot__line bot__line--bottom-left" />
+                  <span className="bot__line bot__line--bottom-right" />
+                </span>
+              )}
             </li>
           ))}
         </ul>
