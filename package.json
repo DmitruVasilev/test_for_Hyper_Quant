@@ -2,7 +2,7 @@
   "name": "react-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dmitruvasilev.github.io/test-work-for-YLab/",
+  "homepage": "https://dmitruvasilev.github.io/test_for_Hyper_Quant/",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
