@@ -14,12 +14,13 @@ class BotList extends Component {
 
   render() {
     const {bots, filter_value} = this.props;
+    /*eslint-disable */
     return (
       <section>
         <ul className="bot_list">
           {bots.map((bot) => (
             <li key={bot.cost} className="bot_list__item">
-              <a href="/" className="bot">
+              <a href="#" className="bot">
                 <span className={`bot__icon bot__icon--${bot.name}`} />
                 <span className={`bot__name ${bot.name === "dark_bot" && "bot__name--dark"}`}>{bot.action}</span>
                 <span
