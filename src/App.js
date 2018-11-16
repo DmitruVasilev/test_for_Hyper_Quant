@@ -4,10 +4,9 @@ import Balance from "./components/Balance";
 import Schedule from "./components/Schedule";
 import BotList from "./components/BotList";
 import TimeRange from "./components/TimeRange";
+import Nav from "./components/Nav";
 import data from "./data.min";
 import "./sass/general.sass";
-
-// console.log("---", data);
 
 class App extends Component {
   state = {
@@ -22,7 +21,7 @@ class App extends Component {
     return (
       <div className="container">
         <Header />
-        <main>
+        <main className="main">
           <Balance
             balance={data.balance}
             on_hold={data.on_hold}
@@ -33,7 +32,7 @@ class App extends Component {
           <BotList bots={data.bots} filter_value={this.state.filter_value} />
           <TimeRange onChangeTime={this.onChangeTime} stateTime={this.state.filter_value} />
         </main>
-        <div>Nav</div>
+        <Nav />
       </div>
     );
   }
