@@ -7,9 +7,17 @@ class BotList extends Component {
     // from filter
     filter_value: PropTypes.string.isRequired,
     // from data
-    bots: PropTypes.shape({
-      optionalProperty: PropTypes.string,
-    }).isRequired,
+    bots: PropTypes.arrayOf(
+      PropTypes.shape({
+        cost: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        action: PropTypes.string.isRequired,
+        "24h": PropTypes.number.isRequired,
+        "7d": PropTypes.number.isRequired,
+        "30d": PropTypes.number.isRequired,
+        all_time: PropTypes.number.isRequired,
+      }),
+    ).isRequired,
   };
 
   render() {
